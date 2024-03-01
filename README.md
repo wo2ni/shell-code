@@ -15,3 +15,15 @@ bash <(curl -sL https://raw.githubusercontent.com/wo2ni/shell-code/main/color.sh
 ```
 bash <(curl -sL https://raw.githubusercontent.com/wo2ni/shell-code/main/decora.sh)
 ```
+
+* systeminfo.sh 发行版信息相关函数.
+
+```bash
+bash <(curl -sL https://raw.githubusercontent.com/wo2ni/shell-code/main/systeminfo.sh)
+```
+
+* check_all.sh 各种检测函数.
+
+```
+bash <(curl -sL https://raw.githubusercontent.com/wo2ni/shell-code/main/check_all.sh)
+```
