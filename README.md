@@ -27,3 +27,9 @@ bash <(curl -sL https://raw.githubusercontent.com/wo2ni/shell-code/main/systemin
 ```
 bash <(curl -sL https://raw.githubusercontent.com/wo2ni/shell-code/main/check_all.sh)
 ```
+
+* regular.sh 各种使用正则表达式的检测匹配函数.
+
+```
+bash <(curl -sL https://raw.githubusercontent.com/wo2ni/shell-code/main/regular.sh)
+```
