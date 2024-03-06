@@ -38,3 +38,24 @@ echoContent() {
         ;;
     esac
 }
+
+# status print
+function _info() {
+  printf "${GREEN}[信息] ${NC}"
+  printf -- "%s" "$@"
+  printf "\n"
+}
+
+function _warn() {
+  printf "${YELLOW}[警告] ${NC}"
+  printf -- "%s" "$@"
+  printf "\n"
+}
+
+function _error() {
+  printf "${RED}[错误] ${NC}"
+  printf -- "%s" "$@"
+  printf "\n"
+  exit 1
+}
+
