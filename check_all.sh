@@ -10,3 +10,12 @@ check_running_as_root() {
   fi
 }
 
+
+# 检查SELinux状态
+checkCentosSELinux() {
+    if [[ -f "/etc/selinux/config" ]] && ! grep -q "SELINUX=disabled" <"/etc/selinux/config"; then
+        printf 'SeLinux: runing\n'
+        exit 0
+    fi
+}
+
