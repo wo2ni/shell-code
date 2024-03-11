@@ -19,3 +19,25 @@ checkCentosSELinux() {
     fi
 }
 
+# URL 检测函数.
+Check_url() {
+    http_code="$(curl -o /dev/null -s --head --write-out '%{http_code}\n' -- "${1}")"
+    case "${http_code}" in
+        000)
+            fancy_message error "Failed to download file, check your connection"
+            error_log 1 "get ${PACKAGE} pacscript"
+            return 1
+            ;;
+        404)
+            fancy_message error "The URL cannot be found"
+            return 1
+            ;;
+        200 | 301 | 302)
+            true
+            ;;
+        *)
+            fancy_message error "Failed with http code ${http_code}"
+            return 1
+            ;;
+    esac
+}
