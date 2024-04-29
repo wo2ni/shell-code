@@ -60,28 +60,30 @@ function _error() {
 }
 
 
-Color_Text()
-{
+Color_Text() {
   echo -e " \e[0;$2m$1\e[0m"
 }
 
-Echo_Red()
-{
+Echo_Red() {
   echo $(Color_Text "$1" "31")
 }
 
-Echo_Green()
-{
+Echo_Green() {
   echo $(Color_Text "$1" "32")
 }
 
-Echo_Yellow()
-{
+Echo_Yellow() {
   echo -n $(Color_Text "$1" "33")
 }
 
-Echo_Blue()
-{
+Echo_Blue() {
   echo $(Color_Text "$1" "34")
 }
 
+Echo_Cyan_blue() {
+  echo $(Color_Text "$1" "36")
+}
+
+Echo_Clean() {
+    printf '\033[1;0m\n'
+}
